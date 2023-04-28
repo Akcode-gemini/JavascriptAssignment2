@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid" style="background-color: aquamarine">
+      <div class="row">
+        <div class="col border border-dark">
+          <div class="text-center">
+            <h1 class="text-decoration-underline">Form</h1>
+            <form id="inp_form" style="padding: 20px">
+              <div class="mb-3">
+                <label for="nm" class="fs-5">Name:</label>
+                <input
+                  type="text"
+                  id="nm"
+                  class="form-control form-control-lg"
+                  placeholder="Enter the name"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="fs-5">E-mail:</label>
+                <input
+                  type="text"
+                  id="email"
+                  class="form-control form-control-lg"
+                  placeholder="Enter the E-mail"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="num" class="fs-5">Mobile no.:</label>
+                <input
+                  type="text"
+                  id="num"
+                  class="form-control form-control-lg"
+                  placeholder="Enter the Mobile number"
+                />
+              </div>
+              <div class="d-grid gap-2 d-md-block">
+                <input
+                  class="btn btn-outline-primary"
+                  type="submit"
+                  id="sub"
+                  value="Submit"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col border border-dark">
+          <h1 class="text-center mb-3 text-decoration-underline">Records</h1>
+          <div class="table-responsive">
+            <table class="table table-hover table-bordered">
+              <thead class="table-light">
+                <tr class="text-center">
+                  <th scope="col">Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Mobile No.</th>
+                </tr>
+              </thead>
+              <tbody id="tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
