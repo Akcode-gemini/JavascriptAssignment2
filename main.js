@@ -38,7 +38,7 @@ function validName(name) {
         return true;
     }
     else {
-        alert("Enter the valid name having letters,spaces and length greater than 2");
+        alert("Enter the valid name containing only letters and spaces");
         return false;
     }
 }
