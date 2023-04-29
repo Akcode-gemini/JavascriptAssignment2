@@ -38,7 +38,7 @@ function validName(name) {
         return true;
     }
     else {
-        alert("Enter the valid name containing only letters and spaces");
+        alert("Enter the valid name containing having letters,spaces and length greater than 2");
         return false;
     }
 }
@@ -58,7 +58,7 @@ function validContact(cont) {
         return true;
     }
     else {
-        alert("Enter the valid phone number");
+        alert("Enter the valid 10 digit phone number");
         return false;
     }
 }
