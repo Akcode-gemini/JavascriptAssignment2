@@ -1,5 +1,5 @@
 //Load employee data from local storage if exists or initialize with empty array.
-let empData = JSON.parse(localStorage.getItem('empData')) || [];
+let empData = JSON.parse(localStorage.getItem('empData')) ?JSON.parse(localStorage.getItem('empData')): [];
 //Get the form element and add a submit event listener.
 const form = document.getElementById("inp_form");
 form.addEventListener("submit", (e) => {
@@ -38,7 +38,7 @@ function validName(name) {
         return true;
     }
     else {
-        alert("Enter the valid name containing only letters and spaces");
+        alert("Enter the valid name having letters,spaces and length greater than 2");
         return false;
     }
 }
@@ -58,7 +58,7 @@ function validContact(cont) {
         return true;
     }
     else {
-        alert("Enter the valid phone number");
+        alert("Enter the valid 10 digit phone number");
         return false;
     }
 }
@@ -67,7 +67,7 @@ function store(name, email, cont) {
     d = {
         "name": name,
         "email": email,
-        "phone": cont,
+        "phone": cont
     }
     empData.push(d);
     localStorage.setItem("empData", JSON.stringify(empData));
@@ -98,4 +98,15 @@ function display() {
         trow.appendChild(tdPhone);
         tbody.appendChild(trow);
     })
+}
+//To display the data if exist
+if (JSON.parse(localStorage.getItem("empData"))) {
+    //console.log(data)
+    display();
+}
+//to clear local storage
+function rem(){ 
+    //clears the entire localStorage
+    localStorage.clear();
+    window.location.reload();
 }
